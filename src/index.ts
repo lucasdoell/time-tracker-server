@@ -8,7 +8,7 @@ const app = new Hono();
 app.use(logger());
 app.use(
   cors({
-    origin: ["tauri://localhost", "http://localhost:1420"],
+    origin: ["tauri://localhost", "http://localhost:3000"],
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowHeaders: ["Content-Type", "Authorization"],
     exposeHeaders: ["Content-Length", "X-Kuma-Revision"],
