@@ -1,5 +1,5 @@
 import { betterAuth } from "better-auth";
-import { jwt } from "better-auth/plugins";
+import { bearer, jwt } from "better-auth/plugins";
 import { Pool } from "pg";
 
 export const auth = betterAuth({
@@ -9,5 +9,5 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
-  plugins: [jwt()],
+  plugins: [jwt(), bearer()],
 });
